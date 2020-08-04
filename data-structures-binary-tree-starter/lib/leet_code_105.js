@@ -21,5 +21,23 @@ const { TreeNode } = require('./tree_node.js');
 
 
 function buildTree(preorder, inorder) {
+    if (preorder.length === 0) return null;
+    let rootNode = new TreeNode(preorder[0]);
+    let rootIndex = inorder.indexOf(preorder[0]);
+    let leftInorder = inorder.slice(0, rootIndex);
+    let rightInorder = inorder.slice(rootIndex +1);
+    // left preorder
+    let leftPreorder = preorder.slice(1, leftInorder.length+1);
+    // right preorder
+    let rightPreorder = preorder.slice(leftInorder.length+1)
+
+
+    rootNode.left = buildTree(leftPreorder,leftInorder);
+    rootNode.right = buildTree(rightPreorder, rightInorder);
+
+    return rootNode;
 
 }
+
+
+// preorder traversal helper
