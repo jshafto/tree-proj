@@ -9,6 +9,6 @@ This project contains skeletons and tests to implement a generic binary tree, an
     - [x] Binary tree implementation
     - [x] Bonus: build a tree from traversal
 - Binary Search Tree
-    - [ ] Binary search tree implementation
+    - [x] Binary search tree implementation
     - [ ] Bonus: build a balanced BST from a sorted list
     - [ ] Bonus: determine if a tree is balanced
